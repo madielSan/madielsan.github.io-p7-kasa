@@ -3,6 +3,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Header from './components/Header'
+import Footer from './components/Footer'
 import Home from './pages/Home'
 import About from './pages/About'
 import Rental from './pages/Rental'
@@ -19,6 +20,7 @@ root.render(
           <Route exact path="/rental/:id" element={<Rental />} />
           <Route exact path="/*" element={<Errors />} />
       </Routes> 
+      <Footer />
     </Router>
   </React.StrictMode>
 )
