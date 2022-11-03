@@ -1,0 +1,32 @@
+@import "../utils/variables";
+
+.thumb{
+    height: 100%;
+    background-color: $color-primary;
+    border-radius: 10px;
+    position: relative;
+    &__cover {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+    }
+    &__filter {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        background: linear-gradient(360deg, rgba(0, 0, 0, 0.5), transparent 40%);
+    }
+    
+    &__title {
+        width: 70%;
+        color: #fff;
+        font-size: 14px;
+        font-weight: 500;
+        padding-left: 10px;
+        position: absolute;
+        bottom: 5px;
+       
+    }
+}

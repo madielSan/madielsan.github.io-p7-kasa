@@ -1,0 +1,28 @@
+@import "../base/base";
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__logo {
+        width: 120px ;
+    }
+    &__nav {
+        
+        &__link {
+            color: $color-primary;
+            text-decoration:  none;
+            margin: 0 30px;
+            font-family: 'Montserrat', sans-serif;
+        }
+    }
+
+}
+
+.active {
+    text-decoration: underline;
+}
+
+.inactive {
+    text-decoration: none;
+}

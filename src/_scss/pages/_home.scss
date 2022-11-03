@@ -1,0 +1,18 @@
+.thumbs-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    align-items: center;
+    gap: 50px;
+    background-color: #F6F6F6;
+    padding: 30px 50px;
+    margin: 30px auto;
+    border-radius: 25px;
+    &__thumb {
+        height: 100%;
+    }
+}
+
+.thumbs-link {
+    text-decoration: none;
+}
