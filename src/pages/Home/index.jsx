@@ -1,13 +1,17 @@
-import Banner from "../../components/Banners/home-banner"
+import Banner from "../../components/Banners"
 import ThumbProduct from "../../components/ThumbProduct"
 import Rentals from "../../datas/datas-logement.json"
+import image from "../../assets/banner-home.jpg"
 import {Link} from "react-router-dom"
+
 import "../../_scss/pages/_home.scss"
 
 function Home() {
     return (
-        <main>
-            <Banner text="Chez vous, partout et ailleurs" />
+        <main className="home">
+            <div className="home-banner">
+            <Banner image={image} text="Chez vous, partout et ailleurs" />
+            </div>
             <section className="thumbs-container">
                 {Rentals.map((rental) => {
                     return(

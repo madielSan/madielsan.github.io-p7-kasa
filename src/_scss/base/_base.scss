@@ -2,8 +2,13 @@
 @import "../utils/variables";
 @import "normalize";
 
+
 body {
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
-    margin: 10px 50px;
+    position: relative;
 }
+
+#root {
+    padding-bottom: 217px;
+  }

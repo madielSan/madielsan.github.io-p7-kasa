@@ -1,3 +1,6 @@
+.home {
+    margin: 10px 50px;
+}
 .thumbs-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -6,7 +9,7 @@
     gap: 50px;
     background-color: #F6F6F6;
     padding: 30px;
-    margin: 30px auto;
+    margin: 30px 0;
     border-radius: 25px;
     &__thumb {
         height: 100%;
