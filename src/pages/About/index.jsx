@@ -3,7 +3,6 @@ import image from "../../assets/banner-about.jpg"
 import aboutDatas from "../../datas/datas-about.json"
 import Collapse from "../../components/Collapse"
 import "../../_scss/pages/about.scss"
-
 function About() {
     return (
         <main className="about">

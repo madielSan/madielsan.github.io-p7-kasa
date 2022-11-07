@@ -1,9 +1,13 @@
 import React, { useState } from "react";
+import { useRef } from "react";
+import {CSSTransition} from "react-transition-group"
 import chevron from "../../assets/chevron.jpg"
 import "../../_scss/components/collapse.scss"
 
 function Collapse({title, description}) {
+    const nodeRef = useRef(null)
     const [isOpen, setIsOpen] = useState(false)
+
     return (
         <article className="collapse">
             <div className="collapse__head">
@@ -13,8 +17,18 @@ function Collapse({title, description}) {
                 </span>
             </div>
             {
-            isOpen &&
-             <div className="collapse__description">{description}</div>
+            // isOpen &&
+            <CSSTransition
+            nodeRef={nodeRef}
+            in={isOpen}
+            timeout={200}
+            classNames="fade"
+            unmountOnExit
+            appear
+            
+          >
+             <div ref={nodeRef} className="collapse__description">{description}</div>
+             </CSSTransition>
         }
         </article>
     )
