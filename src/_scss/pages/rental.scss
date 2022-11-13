@@ -1,9 +1,39 @@
+@import "../utils/variables";
+
 .rental {
     &__presentation {
+        color: $color-primary;
         display: flex;
         justify-content: space-between;
         width: 93%;
         margin: auto;
+        &__titles {
+            &__title{
+                font-size: 28px;
+                font-weight: 500;
+                margin-bottom: 5px;
+            }
+            &__location {
+                margin-top: 0px;
+                margin-left: 2px;
+            }
+        }
+    }
+    &__features {
+        display: flex;
+        justify-content: space-between;
+        width: 93.5%;
+        margin: auto;
+    }
+
+    &__description {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 38px;
+        width: 93%;
+        height: 100%;
+        margin: auto;
+        
     }
 
 }

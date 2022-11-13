@@ -1,8 +1,9 @@
+import "../../_scss/components/tags.scss"
 function Tags({tags}) {
     return (
-        <ul>
+        <ul className="tags">
             {tags.map((keyTag) => (
-                <li key={keyTag}>{keyTag}</li>
+                <li className="tags__tag" key={keyTag}>{keyTag}</li>
             ))}
         </ul>
     )

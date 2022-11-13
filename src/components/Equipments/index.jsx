@@ -1,8 +1,9 @@
+import "../../_scss/components/equipments.scss"
 function Equipments({equipments}) {
     return (
-        <ul>
+        <ul className="equipments">
             {equipments.map((element, index) => (
-                <li key={`${element}-${index}`}>{element}</li>
+                <li className="equipments__list" key={`${element}-${index}`}>{element}</li>
             ))}
         </ul>
     )

@@ -6,6 +6,7 @@ import Tags from "../../components/Tags"
 import Rating from "../../components/Rating"
 import Host from "../../components/Host"
 import Collapse from "../../components/Collapse"
+import Description from "../../components/Description"
 import Equipments from "../../components/Equipments"
 import "../../_scss/pages/rental.scss"
 
@@ -32,7 +33,7 @@ function Rental() {
                 <Rating  rating={rating}/>
             </div>
             <div className="rental__description">
-                <Collapse title="Description" description={description}/>
+                <Collapse title="Description" description={Description({description})}/>
                 <Collapse title="Équipements" description={Equipments({equipments})}/>
 
             </div>

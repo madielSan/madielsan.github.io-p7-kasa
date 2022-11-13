@@ -1,8 +1,10 @@
+import "../../_scss/components/host.scss"
+
 function Host({host}) {
     return(
-        <div>
-            <div>{host.name}</div>
-            <img  src={host.picture} alt={host.name}/>
+        <div className="host">
+            <div className="host__name">{host.name}</div>
+            <img className="host__picture" src={host.picture} alt={host.name}/>
         </div>
     )
 }

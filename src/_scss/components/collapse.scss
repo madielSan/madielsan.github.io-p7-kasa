@@ -18,9 +18,10 @@
     &__description {
         background-color: #F6F6F6;
         color: $color-primary;
-        padding: 18px 10px 10px;
+        padding: 18px 10px 18px;
         font-size: 17px;
         animation: 300ms ease-in-out fade;
+        height: 70%;
     }
 }
 
