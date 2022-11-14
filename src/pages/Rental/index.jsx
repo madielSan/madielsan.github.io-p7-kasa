@@ -1,5 +1,5 @@
 import React from "react"
-import { useParams} from "react-router-dom"
+import {useParams, Navigate} from "react-router-dom"
 import Carrousel from "../../components/Carrousel"
 import rentals from "../../datas/datas-logement.json"
 import Tags from "../../components/Tags"
@@ -15,9 +15,12 @@ function Rental() {
     const {id}= useParams()
     const rental = rentals.find((rental) => rental.id === id)
 
-        
+    if (!rental) {
+        return <Navigate to="/404"/>
+     }
+
     const {title, pictures, description, host, rating, location, equipments, tags} = rental
-    
+
     return (
         <div className="rental">
             <Carrousel classname="rental__carrousel" slider={pictures} />
