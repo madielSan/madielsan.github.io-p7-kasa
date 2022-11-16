@@ -1,0 +1,36 @@
+@import "variables";
+
+// Mixins qui utilisent les breakpoints pour s'adapter aux versions tablettes et mobiles du site et facilite son introduction dans le code.
+@mixin tablettes { //tablettes breakpoint: 992px
+    @media screen and (max-width:map-get($breakpoints, tablette)){
+    @content;
+    }
+}
+@mixin mobile { //mobile breakpoint: 768px
+    @media (max-width:map-get($breakpoints,mobile)){
+    @content;
+    }
+}
+
+@mixin banner-filter($height:90px) {
+    background: $shadow-filter;
+    position: absolute;
+    top: 0;
+    border-radius: 20px;
+    height: 160px;
+    width: 100%;
+    @include mobile {
+        height: $height;
+    }
+}
+
+@mixin banner-image($height: 90px) {
+    width: 100%;
+    border-radius: 20px;
+    height: 160px;
+    object-fit: cover;
+    @include mobile {
+        height: $height;
+    }
+    
+}

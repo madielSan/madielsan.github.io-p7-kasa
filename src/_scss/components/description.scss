@@ -1,6 +1,12 @@
+@import "../utils/mixins";
+
 .description {
     padding: 0 10px;
     &__text {
         line-height: 28px;
+        @include mobile {
+            line-height: 24px;
+            margin: 0;
+        }
     }
 }

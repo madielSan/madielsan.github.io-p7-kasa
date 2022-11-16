@@ -1,2 +1,9 @@
 $color-primary:  #FF6060;
-$shadow-filter:  linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3))
+$shadow-filter:  linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+
+$breakpoints: 
+(
+    mobile: 767px,
+    tablette: 992px
+);
+

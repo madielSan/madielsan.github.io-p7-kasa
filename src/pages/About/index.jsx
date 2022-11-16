@@ -6,10 +6,10 @@ import "../../_scss/pages/about.scss"
 function About() {
     return (
         <main className="about">
-            <div className="about-banner">
+            <div className="about__banner">
                 <Banner image={image} />
             </div>
-            <section>
+            <section className="collapse">
                 {aboutDatas.map((aboutDatas) => {
                     return (
                         <Collapse key={aboutDatas.id} title={aboutDatas.title} description={aboutDatas.description} />

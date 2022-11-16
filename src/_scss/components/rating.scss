@@ -1,8 +1,13 @@
+@import "../utils/mixins";
+
 .rating {
     display: flex;
     justify-content: center;
     align-items: center;
     &__star {
         width: 25px;
+        @include mobile {
+            width: 15px;
+        }
     }
 }

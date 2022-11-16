@@ -1,5 +1,5 @@
 import footerLogo from "../../assets/footer-logo.png"
-import "../../_scss/layouts/_footer.scss"
+import "../../_scss/layouts/footer.scss"
 function Footer() {
     const thisYear = new Date().getFullYear()
     return (

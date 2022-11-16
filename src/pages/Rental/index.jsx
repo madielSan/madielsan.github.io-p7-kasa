@@ -29,11 +29,18 @@ function Rental() {
                     <h1 className="rental__presentation__titles__title">{title}</h1>
                     <p className="rental__presentation__titles__location">{location}</p>
                 </div>
-                <Host host={host} />
+            </div>
+    
+            <div className="rental__tags">
+            <Tags tags={tags} />
             </div>
             <div className="rental__features">
-                <Tags tags={tags} />
-                <Rating  rating={rating}/>
+                <div className="rental__features__host">
+                    <Host host={host} />
+                </div>
+                <div className="rental__features__rating">
+                    <Rating  rating={rating}/>
+                </div>
             </div>
             <div className="rental__description">
                 <Collapse title="Description" description={Description({description})}/>

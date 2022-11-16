@@ -1,6 +1,6 @@
 import {NavLink} from 'react-router-dom'
-import {ReactComponent as Logo } from './navbar-logo.svg'
-import '../../_scss/layouts/Header.scss'
+import {ReactComponent as Logo } from '../../assets/navbar-logo.svg'
+import '../../_scss/layouts/header.scss'
 function Header() {
     return(
         <div className='navbar'>

@@ -1,39 +1,110 @@
 @import "../utils/variables";
+@import "../utils/mixins";
 
 .rental {
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 185px;
+    justify-content: space-between;
+    align-items: center;
     &__presentation {
+        width: 60%;
         color: $color-primary;
         display: flex;
         justify-content: space-between;
-        width: 93%;
-        margin: auto;
+        align-items: center;
+        @include tablettes {
+            width: 70%;
+            flex-direction: column;
+        }
+        @include mobile {
+            width: 100%;
+        }
         &__titles {
+            width: 80%;
+            margin-left: 55px;
+            @include tablettes {
+               width: 90%;
+               margin-left: 15px;
+            }
+            @include mobile {
+                margin-left: 0px;
+            }
+        
             &__title{
                 font-size: 28px;
                 font-weight: 500;
                 margin-bottom: 5px;
+                @include mobile {
+                    font-size: 18px;
+                }
             }
             &__location {
                 margin-top: 0px;
                 margin-left: 2px;
+                @include mobile {
+                    font-size: 14px;
+                }
             }
         }
     }
-    &__features {
-        display: flex;
-        justify-content: space-between;
-        width: 93.5%;
-        margin: auto;
+    &__tags {
+        width: 53%;
+        margin-left: 55px;
+        order: 2;
+        @include tablettes {
+            width: 93%;
+            margin: auto;
+        }
+        @include mobile {
+            width: 95%;
+            order: 1;
+        }
     }
-
+    &__features {
+        position: relative;
+        top: 10px;
+        @include tablettes {
+            width: 90%;
+            position: initial;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 10px auto;
+            order: 2;
+        }
+        &__host {
+            color: $color-primary;
+            margin-right: 60px;
+            order: 1;
+            @include tablettes {
+               margin: 0;
+                order: 2;
+            }
+        }
+        &__rating {
+        margin-right: 60px;
+        order: 2;
+        position: relative;
+        top: 20px;
+        @include tablettes {
+            top: 0;
+            order: 1;
+            margin: 0;
+            }
+        }
+    }
     &__description {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         column-gap: 38px;
-        width: 93%;
+        width: 100%;
         height: 100%;
-        margin: auto;
-        
+        margin: auto 40px;
+        order: 4;
+        @include mobile {
+            grid-template-columns: repeat(1, 1fr);
+            margin: 0 20px;
+        }
     }
-
 }

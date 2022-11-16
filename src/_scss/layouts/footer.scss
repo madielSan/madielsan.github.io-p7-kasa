@@ -1,3 +1,5 @@
+@import "../utils/mixins";
+
 .footer {
     width: 100%;
     display: flex;
@@ -11,12 +13,18 @@
     bottom: 0;
     left: 0;
     right: 0;
-    
+    @include mobile {
+        
+        padding-bottom: 30px;
+    }
     &__logo {
         width: 80px ;
         margin-bottom: 15px;
     }
     &__copyright {
         font-size: 14px;
+        @include mobile {
+            font-size: 11px;
+        }
     }
 }
