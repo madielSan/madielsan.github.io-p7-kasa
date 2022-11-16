@@ -3,8 +3,7 @@ import ThumbProduct from "../../components/ThumbProduct"
 import Rentals from "../../datas/datas-logement.json"
 import image from "../../assets/banner-home.jpg"
 import {Link} from "react-router-dom"
-
-import "../../_scss/pages/_home.scss"
+import "../../_scss/pages/home.scss"
 
 function Home() {
     return (
