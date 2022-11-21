@@ -13,12 +13,6 @@
     @include mobile {
         align-items: flex-start;
     }
-    &__filter {
-        @include banner-filter;
-    &--about {
-        @include banner-filter(220px);
-        }
-    }
     &__image {
         @include banner-image;
         &--about {
@@ -33,7 +27,7 @@
         position: absolute;
         @include mobile {
             text-align: start;
-            font-size: 20px;
+            font-size: 16.5px;
             margin-left: 10px;
             width: 54%;
         }

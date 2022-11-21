@@ -12,19 +12,8 @@
     }
 }
 
-@mixin banner-filter($height:90px) {
-    background: $shadow-filter;
-    position: absolute;
-    top: 0;
-    border-radius: 20px;
-    height: 160px;
-    width: 100%;
-    @include mobile {
-        height: $height;
-    }
-}
-
 @mixin banner-image($height: 90px) {
+    filter: brightness(73%);
     width: 100%;
     border-radius: 20px;
     height: 160px;
@@ -33,4 +22,18 @@
         height: $height;
     }
     
+}
+
+@mixin inside-collapse($padding: 18px 10px 18px) {
+    background-color: #F6F6F6;
+    color: $color-primary;
+    padding: $padding;
+    font-size: 17px;
+    animation: 300ms ease-in-out fade;
+    margin: 0;
+    height: 85%;
+    @include mobile {
+        height: auto;
+        font-size: 14px;
+    }
 }
