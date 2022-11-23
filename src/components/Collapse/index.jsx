@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import chevron from "../../assets/chevron.jpg"
 import "../../_scss/components/collapse.scss"
 
-function Collapse({title, description, text, equipment}) {
-    const [isOpen, setIsOpen] = useState(true)
+function Collapse({title, description, text, equipment, open=true}) {
+    const [isOpen, setIsOpen] = useState(open)
 
     return (
         <article className="collapse">
