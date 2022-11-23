@@ -10,15 +10,15 @@ import "../../_scss/pages/rental.scss"
 
 
 function Rental() {
-    const {id}= useParams()
+    const {id}= useParams() //récupération de l'ID produit de l'url
     const rental = rentals.find((rental) => rental.id === id)
 
-    if (!rental) {
+    if (!rental) { // si l'élément id de l'url est différent d'un élément de la base de données du fichier JSON.
         return <Navigate to="/404"/>
      }
 
-    const {title, pictures, description, host, rating, location, equipments, tags} = rental
-
+     //constante destructurée affectée à l'objet rental contenant les données.
+    const {title, pictures, description, host, rating, location, equipments, tags} = rental 
     return (
         <div className="rental">
             <Carrousel classname="rental__carrousel" slider={pictures} />
@@ -28,7 +28,6 @@ function Rental() {
                     <p className="rental__presentation__titles__location">{location}</p>
                 </div>
             </div>
-    
             <div className="rental__tags">
             <Tags tags={tags} />
             </div>
@@ -43,10 +42,8 @@ function Rental() {
             <div className="rental__description">
                 <Collapse title="Description" text={description}/>
                 <Collapse title="Équipements" equipment= {equipments}/>
-
             </div>
-        </div>
-        
+        </div> 
     )
 }
 

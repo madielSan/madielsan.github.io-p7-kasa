@@ -14,7 +14,6 @@ function Collapse({title, description, text, equipment}) {
                 </span>
             </div>
             {
-            
             text ?
             isOpen &&
             <p className="collapse__text">{text}</p>
